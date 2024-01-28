@@ -19,18 +19,34 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3c15600f-c461-4e4e-b8ca-f0c5fa1842f4
+          columnCounter: 0b67959c-1576-4b41-b20b-31c0d5e76ccb
           stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
         config: {}
         dataType: NUMBER(38,0)
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_ORDERKEY
+        name: ORDER_CUSTKEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 9c034b55-1353-4838-854b-e3161871d202
+              - columnCounter: 6f262144-a21a-4ad3-9a6b-040aca155954
+                stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfbe535d-2ce1-4060-881d-0c96bc61795c
+          stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashColumns: []
+        hashDetails: null
+        name: LINEITEM_SUPPKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f65cb731-76fb-4f9b-af8d-e6af53326eb0
                 stepCounter: e112e2b8-918f-4069-abe1-cb303e43876f
             transform: ""
       - appliedColumnTests: {}
@@ -42,7 +58,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_PARTKEY
+        name: LINEITEM_PARTKEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -51,18 +67,18 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bfbe535d-2ce1-4060-881d-0c96bc61795c
+          columnCounter: 3c15600f-c461-4e4e-b8ca-f0c5fa1842f4
           stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
         config: {}
         dataType: NUMBER(38,0)
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_SUPPKEY
+        name: LINEITEM_ORDERKEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: f65cb731-76fb-4f9b-af8d-e6af53326eb0
+              - columnCounter: 9c034b55-1353-4838-854b-e3161871d202
                 stepCounter: e112e2b8-918f-4069-abe1-cb303e43876f
             transform: ""
       - appliedColumnTests: {}
@@ -74,7 +90,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_LINENUMBER
+        name: LINEITEM_LINENUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -90,7 +106,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_QUANTITY
+        name: LINEITEM_QUANTITY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -106,7 +122,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_EXTENDEDPRICE
+        name: LINEITEM_EXTENDEDPRICE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -122,7 +138,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_DISCOUNT
+        name: LINEITEM_DISCOUNT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -138,7 +154,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_TAX
+        name: LINEITEM_TAX
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -154,7 +170,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_RETURNFLAG
+        name: LINEITEM_RETURNFLAG
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -170,7 +186,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_LINESTATUS
+        name: LINEITEM_LINESTATUS
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -186,7 +202,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_SHIPDATE
+        name: LINEITEM_SHIPDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -202,7 +218,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_COMMITDATE
+        name: LINEITEM_COMMITDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -218,7 +234,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_RECEIPTDATE
+        name: LINEITEM_RECEIPTDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -234,7 +250,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_SHIPINSTRUCT
+        name: LINEITEM_SHIPINSTRUCT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -250,7 +266,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_SHIPMODE
+        name: LINEITEM_SHIPMODE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -266,7 +282,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: L_COMMENT
+        name: LINEITEM_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -282,27 +298,11 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERKEY
+        name: ORDER_ORDERKEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 0ea81d48-8926-4f18-836f-4c2af06fde5e
-                stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0b67959c-1576-4b41-b20b-31c0d5e76ccb
-          stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        hashColumns: []
-        hashDetails: null
-        name: O_CUSTKEY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 6f262144-a21a-4ad3-9a6b-040aca155954
                 stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
             transform: ""
       - appliedColumnTests: {}
@@ -314,7 +314,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERSTATUS
+        name: ORDER_ORDERSTATUS
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -330,7 +330,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_TOTALPRICE
+        name: ORDER_TOTALPRICE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -346,7 +346,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_TOTAL_ORDER_PRICE
+        name: ORDER_TOTAL_ORDER_PRICE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -364,7 +364,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERDATE
+        name: ORDER_ORDERDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -380,7 +380,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERPRIORITY_NUM
+        name: ORDER_ORDERPRIORITY_NUM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -396,7 +396,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERPRIORITY_DESC
+        name: ORDER_ORDERPRIORITY_DESC
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -412,7 +412,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_CLERK
+        name: ORDER_CLERK
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -428,7 +428,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_SHIPPRIORITY
+        name: ORDER_SHIPPRIORITY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -444,7 +444,7 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_COMMENT
+        name: ORDER_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
