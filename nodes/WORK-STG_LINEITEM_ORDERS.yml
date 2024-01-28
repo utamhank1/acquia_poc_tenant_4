@@ -339,6 +339,24 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: ab32ca3b-da7b-4ac0-801b-108a5310b3ff
+          stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        hashColumns: []
+        hashDetails: null
+        name: O_TOTAL_ORDER_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdd01f42-3ec7-44c8-b52d-fef4545adc4e
+                stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
+            transform: |+
+              CASE WHEN "STG_LINEITEM"."L_LINENUMBER" = 1 THEN "STG_ORDERS"."O_TOTALPRICE" ELSE 0 END
+
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 18bc7141-9cb2-40ae-b9bc-7db7e47bd395
           stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
         config: {}
@@ -362,13 +380,29 @@ operation:
         description: ""
         hashColumns: []
         hashDetails: null
-        name: O_ORDERPRIORITY
+        name: O_ORDERPRIORITY_NUM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 09a6f15b-e66e-4bdd-a2f1-bd0d8d0e43c2
                 stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
-            transform: ""
+            transform: SPLIT_PART("STG_ORDERS"."O_ORDERPRIORITY", '-', 1 )
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96c43252-9dfe-43d8-918b-f91486fa1121
+          stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
+        config: {}
+        dataType: STRING
+        description: ""
+        hashColumns: []
+        hashDetails: null
+        name: O_ORDERPRIORITY_DESC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09a6f15b-e66e-4bdd-a2f1-bd0d8d0e43c2
+                stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
+            transform: SPLIT_PART("STG_ORDERS"."O_ORDERPRIORITY", '-', 2 )
       - appliedColumnTests: {}
         columnReference:
           columnCounter: df31aa65-d932-4eda-8d32-f43f892a2971
@@ -417,6 +451,27 @@ operation:
               - columnCounter: a7595fb5-75c4-445b-a569-5fbf80cb9441
                 stepCounter: 9aa85a38-8719-4746-a3a2-050e380abd5a
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aafdfda8-d604-45a1-9fae-605479a1ecce
+          stepCounter: 7af56898-7cc5-4426-a16a-a986ccb9410d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DAYS_TO_SHIP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DATEDIFF('DAY',"STG_ORDERS"."O_ORDERDATE","STG_LINEITEM"."L_SHIPDATE")
+        systemColumnType: None
+        transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
