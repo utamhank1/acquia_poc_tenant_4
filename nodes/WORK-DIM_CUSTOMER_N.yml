@@ -1,6 +1,6 @@
 fileVersion: 1
 id: f4b94db7-0ae1-4e64-9f52-f35c8e268f87
-name: DIM_CUSTOMER
+name: DIM_CUSTOMER_N
 operation:
   config:
     postSQL: ""
@@ -283,9 +283,9 @@ operation:
             nodeName: STG_CUSTOMER
         join:
           joinCondition: FROM {{ ref('WORK', 'STG_CUSTOMER') }} "STG_CUSTOMER"
-        name: DIM_CUSTOMER
+        name: DIM_CUSTOMER_N
         noLinkRefs: []
-  name: DIM_CUSTOMER
+  name: DIM_CUSTOMER_N
   overrideSQL: false
   schema: ""
   sqlType: Dimension
